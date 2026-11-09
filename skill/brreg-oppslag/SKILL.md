@@ -18,8 +18,6 @@ Skriptet heter `brreg_oppslag.py`. Som skill ligger det i `scripts/` i mappen ti
 3. Slå opp nummeret: `python scripts/brreg_oppslag.py <organisasjonsnummer>`
 4. Svar kort. Er `status` noe annet enn «aktiv», si det i første setning. Oppgi kilden: Enhetsregisteret.
 
-På Windows uten Python gjør `scripts/brreg_oppslag.ps1` det samme, med samme svar: `powershell -ExecutionPolicy Bypass -File scripts/brreg_oppslag.ps1 <navn eller nummer>`.
-
 ## Feil
 
 - Svaret har feltet `feil`: les meldingen og gjør det den sier. Den er skrevet til deg.

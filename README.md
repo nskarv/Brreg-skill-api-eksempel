@@ -8,7 +8,6 @@ Artikkelen viser oppsettet steg for steg i Claude-appen, uten at du trenger å k
 | --- | --- |
 | `skill/brreg-oppslag/SKILL.md` | Oppskriften Claude følger, skrevet som en skill. |
 | `skill/brreg-oppslag/scripts/brreg_oppslag.py` | Skriptet som søker og slår opp. Rundt 120 linjer, bare Pythons standardbibliotek. |
-| `skill/brreg-oppslag/scripts/brreg_oppslag.ps1` | Samme skript i PowerShell, for Windows uten Python. Gir nøyaktig samme svar. |
 | `instructions.md` | Instruksen du limer inn under Instructions i et Claude-prosjekt. |
 
 ## Slik bruker du det i Claude-appen
@@ -30,15 +29,6 @@ Mappen og nettilgangen krever et betalt abonnement (Pro, Max, Ultra, Team eller 
 python skill/brreg-oppslag/scripts/brreg_oppslag.py equinor      # søk på navn
 python skill/brreg-oppslag/scripts/brreg_oppslag.py 923609016    # oppslag på organisasjonsnummer
 ```
-
-På Windows uten Python:
-
-```powershell
-powershell -ExecutionPolicy Bypass -File .\brreg_oppslag.ps1 Equinor
-```
-
-`-ExecutionPolicy Bypass` slipper gjennom akkurat denne kjøringen og endrer ingen innstillinger. Filen er lagret som
-UTF-8 med BOM, ellers leser Windows PowerShell 5.1 æ, ø og å feil.
 
 Svaret er kort JSON på én linje. Et oppslag på Equinor gir rundt 0,3 kB i stedet for 3 kB fra Brreg:
 
