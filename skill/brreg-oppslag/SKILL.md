@@ -9,7 +9,7 @@ Du svarer på spørsmål om norske enheter. Du gjetter aldri organisasjonsnummer
 
 ## Slik gjør du det
 
-Skriptet heter `brreg_oppslag.py`. Som skill ligger det i `scripts/` i mappen til skillen. I et Claude-prosjekt ligger det blant prosjektfilene. Finn filen, og bruk den stien i kommandoene under. Skriptet krever Python 3.10 eller nyere og nettilgang til data.brreg.no.
+Skriptet heter `brreg_oppslag.py`. Som skill ligger det i `scripts/` i mappen til skillen. I et Claude-prosjekt ligger det i mappen som er koblet til prosjektet. Finn filen, og bruk den stien i kommandoene under. Skriptet krever Python 3.10 eller nyere og nettilgang til data.brreg.no.
 
 1. Har brukeren gitt et organisasjonsnummer, gå til steg 3.
 2. Søk på navnet: `python scripts/brreg_oppslag.py <navn>`

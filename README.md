@@ -16,9 +16,9 @@ Kortversjonen av artikkelen:
 
 1. Legg `SKILL.md`, `brreg_oppslag.py` og `instructions.md` i en egen mappe på PC-en. Legg ikke noe annet der.
 2. Lag et prosjekt i Claude-appen. Lim inn `instructions.md` under Instructions, og koble til mappen med Add folder.
-3. Slå på «Use the internet while making files» under Settings, Capabilities. Under Allowed websites velger du None og
+3. Under Settings, Capabilities må «Create and edit files» være på. Slå også på «Use the internet while making files». Under Allowed websites velger du None og
    legger til `data.brreg.no`. Da når skriptet Brreg og ingenting annet.
-4. Spør: «Hent informasjon om Equinor.»
+4. Spør: «Kan du hente informasjon om Equinor?»
 5. Til slutt kan du gjøre oppsettet om til en skill med `/skill-creator` i samme prosjekt.
 
 Mappen og nettilgangen krever et betalt abonnement (Pro, Max, Ultra, Team eller Enterprise).
@@ -59,6 +59,7 @@ Feil kommer som `{"feil": "..."}` med avslutningskode 1. Meldingene er skrevet t
 | Nummeret finnes ikke (HTTP 404) | `… finnes ikke i Enhetsregisteret. Det kan være en avdeling (underenhet). Søk på navnet.` |
 | Fjernet av juridiske årsaker (HTTP 410) | `… er fjernet fra Enhetsregisterets åpne data av juridiske årsaker.` |
 | Ingen treff på navnet | `Fant ingen enheter med «…» i navnet. Be om organisasjonsnummer eller en annen stavemåte.` |
+| Nettilgangen er sperret (HTTP 403 eller 407) | `data.brreg.no svarte med HTTP 403. Trolig slipper ikke maskinen eller sandkassen til data.brreg.no. …` |
 | Ingen forbindelse | `Fikk ikke kontakt med data.brreg.no (…). Trolig slipper ikke maskinen eller sandkassen til data.brreg.no. …` |
 | Tjenesten svarer ikke innen 20 sekunder | `data.brreg.no svarte ikke innen 20 sekunder. Prøv igjen senere.` |
 
